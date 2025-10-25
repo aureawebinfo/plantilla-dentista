@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,39 +11,51 @@
 </head>
 
 <body>
-    <!--Encabezado-->
+    <!-- Encabezado -->
     <header>
         <div class="container header-container">
             <div class="logo">
                 <img src="Logo dentista.png" alt="Logo Clínica Dental Sonrisa">
             </div>
-            <nav>
+            <nav class="nav-menu">
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
                     <li><a href="#equipo">Equipo</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <!-- Botón Agendar Cita en móvil -->
+                    <li class="mobile-agendar"><a href="agendamiento.html" class="btn btn-primary mobile-btn">Agendar
+                            cita</a></li>
                 </ul>
             </nav>
-            <a href="#contacto" class="btn btn-primary">Agendar cita</a>
+            <!-- Botón Agendar Cita en desktop -->
+            <a href="agendamiento.html" class="btn btn-primary desktop-agendar">Agendar cita</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="nav-menu"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
     <!--Sección de Inicio-->
     <section id="inicio" class="hero">
         <div class="container">
-            <div class="hero-text">
-                <h1>Bienvenido al lugar en el que no pararás de sonreír</h1>
-                <p>Tu salud dental es nuestra prioridad. Ofrecemos tratamientos modernos y personalizados con la más
-                    alta tecnología y profesionales certificados.</p>
-                <a href="#contacto" class="btn btn-primary">Agendar cita</a>
-            </div>
+            <div class="hero-content">
+                <div class="hero-text fade-in">
+                    <h1>Bienvenido al lugar en el que no pararás de sonreír</h1>
+                    <p>Tu salud dental es nuestra prioridad. Ofrecemos tratamientos modernos y personalizados con la más
+                        alta tecnología y profesionales certificados.</p>
+                    <a href="agendamiento.html" class="btn btn-primary">Agendar cita</a>
+                </div>
 
-            <div class="hero-services">
-                <div class="service-box">
-                    <i class="fas fa-clock"></i>
-                    <h3>Horarios</h3>
-                    <p>Lunes - Sáb: 8:00am - 7:00pm</p>
+                <div class="hero-services slide-in-right">
+                    <div class="service-box">
+                        <i class="fas fa-clock"></i>
+                        <h3>Horarios</h3>
+                        <p>Lunes - Sáb: 8:00am - 7:00pm</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,35 +64,49 @@
     <!--Servicios-->
     <section id="servicios" class="bg-blue">
         <div class="container">
-            <h2>Nuestros Servicios</h2>
+            <h2 class="fade-in">Nuestros Servicios</h2>
             <div class="servicios-container">
-                <article class="servicio">
+                <article class="servicio slide-in-left">
                     <div class="servicio-icono">
                         <i class="fas fa-tooth"></i>
                     </div>
-                    <h3>Odontología general</h3>
+                    <h3>Odontología General</h3>
                     <p>Revisiones, limpiezas y tratamientos básicos para mantener tu salud dental</p>
                 </article>
-                <article class="servicio">
+                <article class="servicio slide-in-left" style="animation-delay: 0.1s;">
+                    <div class="servicio-icono">
+                        <i class="fas fa-wand-magic-sparkles"></i>
+                    </div>
+                    <h3>Blanqueamiento Dental</h3>
+                    <p>Tratamientos estéticos para que tu sonrisa luzca más blanca y brillante</p>
+                </article>
+                <article class="servicio slide-in-left" style="animation-delay: 0.2s;">
                     <div class="servicio-icono">
                         <i class="fas fa-teeth"></i>
                     </div>
                     <h3>Ortodoncia</h3>
-                    <p>Brackets y alienadores invisibles para alinear tu sonrisa</p>
+                    <p>Brackets y alineadores invisibles para alinear tu sonrisa</p>
                 </article>
-                <article class="servicio">
+                <article class="servicio slide-in-left" style="animation-delay: 0.3s;">
                     <div class="servicio-icono">
                         <i class="fas fa-screwdriver"></i>
                     </div>
                     <h3>Implantes Dentales</h3>
                     <p>Recupera tus piezas dentales con implantes seguros y duraderos</p>
                 </article>
-                <article class="servicio">
+                <article class="servicio slide-in-left" style="animation-delay: 0.4s;">
                     <div class="servicio-icono">
-                        <i class="fas fa-wand-magic-sparkles"></i>
+                        <i class="fas fa-baby"></i>
                     </div>
-                    <h3>Blanqueamiento</h3>
-                    <p>Tratamientos estéticos para que tu sonrisa luzca más blanca y brillante</p>
+                    <h3>Odontopediatría</h3>
+                    <p>Cuidado dental especializado para los más pequeños de la familia</p>
+                </article>
+                <article class="servicio slide-in-left" style="animation-delay: 0.5s;">
+                    <div class="servicio-icono">
+                        <i class="fas fa-tooth"></i>
+                    </div>
+                    <h3>Endodoncia</h3>
+                    <p>Tratamientos de conducto para salvar tus dientes naturales</p>
                 </article>
             </div>
         </div>
@@ -90,7 +116,7 @@
     <section id="historia" class="bg-light">
         <div class="container">
             <div class="historia-container">
-                <div class="historia-text">
+                <div class="historia-text fade-in">
                     <h2>Desde 1987</h2>
                     <p><strong>Nuestros dentistas incluyen profesionales altamente cualificados, hombres y mujeres, con
                             una amplia trayectoria y habilidades diversas. Nuestro personal administrativo y de apoyo
@@ -115,13 +141,13 @@
                 </div>
 
                 <div class="historia-features">
-                    <div class="feature-card">
+                    <div class="feature-card slide-in-right">
                         <i class="fas fa-stethoscope"></i>
                         <h3>Consejos Dentales Y Chequeos</h3>
                         <p>Contamos con dentistas especializados disponibles para atenderte en cualquier momento.</p>
                     </div>
 
-                    <div class="feature-card">
+                    <div class="feature-card slide-in-right" style="animation-delay: 0.2s;">
                         <i class="fas fa-heartbeat"></i>
                         <h3>Tratamiento Dental De Confianza</h3>
                         <div class="valores">
@@ -136,7 +162,7 @@
                         </div>
                     </div>
 
-                    <div class="feature-card">
+                    <div class="feature-card slide-in-right" style="animation-delay: 0.4s;">
                         <i class="fas fa-ambulance"></i>
                         <h3>Ayuda De Emergencia Disponible</h3>
                         <div class="emergencia">
@@ -154,11 +180,11 @@
     <!--Equipo-->
     <section id="equipo">
         <div class="container">
-            <h2>Nuestro Equipo</h2>
-            <p class="section-description">Contamos con profesionales experimentados dedicados a tu cuidado</p>
+            <h2 class="fade-in">Nuestro Equipo</h2>
+            <p class="section-description fade-in">Contamos con profesionales experimentados dedicados a tu cuidado</p>
 
             <div class="equipo-carrusel-container">
-                <div class="carrusel-control prev" onclick="moverCarrusel(-1)">
+                <div class="carrusel-control prev">
                     <i class="fas fa-chevron-left"></i>
                 </div>
 
@@ -213,14 +239,14 @@
                     </article>
                 </div>
 
-                <div class="carrusel-control next" onclick="moverCarrusel(1)">
+                <div class="carrusel-control next">
                     <i class="fas fa-chevron-right"></i>
                 </div>
 
                 <div class="carrusel-indicadores">
-                    <span class="indicador active" onclick="irASlide(0)"></span>
-                    <span class="indicador" onclick="irASlide(1)"></span>
-                    <span class="indicador" onclick="irASlide(2)"></span>
+                    <span class="indicador active"></span>
+                    <span class="indicador"></span>
+                    <span class="indicador"></span>
                 </div>
             </div>
         </div>
@@ -229,9 +255,9 @@
     <!--Contacto-->
     <section id="contacto">
         <div class="container">
-            <h2>Contacto</h2>
+            <h2 class="fade-in">Contacto</h2>
             <div class="contacto-container">
-                <form class="contacto-form">
+                <form class="contacto-form slide-in-left">
                     <div class="form-group">
                         <label for="nombre">Nombre</label>
                         <input type="text" id="nombre" name="nombre" required>
@@ -251,7 +277,7 @@
                     <button type="submit" class="btn btn-primary">Enviar</button>
                 </form>
 
-                <div class="contacto-info">
+                <div class="contacto-info slide-in-right">
                     <h3>Dirección</h3>
                     <p><i class="fas fa-map-marker-alt"></i> Calle xxx 123, Bogotá, Colombia</p>
                     <p><i class="fas fa-phone"></i> Tel: +57 300 123 4567</p>
@@ -272,7 +298,7 @@
     <footer>
         <div class="container">
             <p class="copyright">© Copyright 2025. Plantilla <a href="https://aureaweb.pages.dev/Index"
-                    target="_blank">Áurea Web</a>. Todos los derechos reservados</p>
+                    target="_blank">Áurea Web</a>. Todos los derechos reservados</p>
             <div class="social-links">
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-instagram"></i></a>
@@ -281,91 +307,7 @@
         </div>
     </footer>
 
-    <script>
-        // Variables para el carrusel
-        let slideIndex = 0;
-        let intervalo;
-        let totalGrupos = 3; // Fijamos 3 grupos ya que tenemos 6 doctores (2 por grupo)
-
-        // Iniciar el carrusel automático
-        function iniciarCarrusel() {
-            intervalo = setInterval(() => {
-                moverCarrusel(1);
-            }, 5000); // Cambia cada 5 segundos
-        }
-
-        // Mover el carrusel en la dirección indicada
-        function moverCarrusel(direccion) {
-            const slides = document.querySelectorAll('.miembro');
-            const indicadores = document.querySelectorAll('.indicador');
-
-            slideIndex += direccion;
-
-            if (slideIndex < 0) {
-                slideIndex = totalGrupos - 1;
-            } else if (slideIndex >= totalGrupos) {
-                slideIndex = 0;
-            }
-
-            // Calcular el desplazamiento
-            const desplazamiento = -slideIndex * 100;
-            document.querySelector('.equipo-carrusel').style.transform = `translateX(${desplazamiento}%)`;
-
-            // Actualizar indicadores
-            actualizarIndicadores();
-
-            // Reiniciar el temporizador
-            reiniciarTemporizador();
-        }
-
-        // Ir a un slide específico
-        function irASlide(index) {
-            const diferencia = index - slideIndex;
-            moverCarrusel(diferencia);
-        }
-
-        // Actualizar indicadores activos
-        function actualizarIndicadores() {
-            const indicadores = document.querySelectorAll('.indicador');
-            indicadores.forEach((indicador, index) => {
-                if (index === slideIndex) {
-                    indicador.classList.add('active');
-                } else {
-                    indicador.classList.remove('active');
-                }
-            });
-        }
-
-        // Reiniciar el temporizador del carrusel
-        function reiniciarTemporizador() {
-            clearInterval(intervalo);
-            iniciarCarrusel();
-        }
-
-        // Iniciar el carrusel cuando la página cargue
-        document.addEventListener('DOMContentLoaded', () => {
-            // Inicializar indicadores
-            actualizarIndicadores();
-            iniciarCarrusel();
-
-            // Ajustar el carrusel al cambiar el tamaño de la ventana
-            window.addEventListener('resize', () => {
-                // Recalcular grupos basado en el ancho de ventana
-                const slides = document.querySelectorAll('.miembro');
-                const slidesPorVista = window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
-                totalGrupos = Math.ceil(slides.length / slidesPorVista);
-
-                // Ajustar indicadores si es necesario
-                const indicadores = document.querySelectorAll('.indicador');
-                if (totalGrupos !== indicadores.length) {
-                    // Aquí podrías agregar lógica para crear/eliminar indicadores dinámicamente
-                    // Pero como sabemos que tenemos 6 slides y siempre serán 3 grupos, no es necesario
-                }
-
-                moverCarrusel(0); // Volver a calcular la posición
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>

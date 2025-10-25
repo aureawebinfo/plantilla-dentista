@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita - Clínica Dental Sonríe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!--Encabezado-->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <img src="Logo dentista.png" alt="Logo Clínica Dental Sonrisa">
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <!-- Botón Volver al inicio -->
+                    <li class="mobile-agendar"><a href="index.html" class="btn btn-primary mobile-btn">Vover al
+                            sitio principal</a></li>
+                </ul>
+            </nav>
+            <!-- Botón Agendar Cita en desktop -->
+            <a href="index.html" class="btn btn-primary desktop-agendar">Volver al Sitio Principal</a>
+            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-controls="nav-menu"
+                aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!--Hero Agendamiento-->
+    <section class="agendamiento-hero">
+        <div class="container">
+            <h1 class="fade-in">Agendar Cita</h1>
+            <p class="fade-in">Programa tu consulta dental con nosotros</p>
+        </div>
+    </section>
+
+    <!--Formulario de Agendamiento-->
+    <section class="agendamiento-container">
+        <form class="form-agendamiento slide-in-left">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre-completo">Nombre Completo *</label>
+                    <input type="text" id="nombre-completo" name="nombre-completo" required
+                        placeholder="Ingrese su nombre completo">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono *</label>
+                    <input type="tel" id="telefono" name="telefono" required
+                        placeholder="Ingrese su número de teléfono">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico *</label>
+                    <input type="email" id="email" name="email" required placeholder="Ingrese su correo electrónico">
+                </div>
+                <div class="form-group">
+                    <label for="fecha-nacimiento">Fecha de Nacimiento</label>
+                    <input type="date" id="fecha-nacimiento" name="fecha-nacimiento">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="servicio">Servicio Solicitado *</label>
+                    <select id="servicio" name="servicio" required>
+                        <option value="">Seleccione un servicio</option>
+                        <option value="odontologia-general">Odontología General</option>
+                        <option value="ortodoncia">Ortodoncia</option>
+                        <option value="implantes">Implantes Dentales</option>
+                        <option value="blanqueamiento">Blanqueamiento</option>
+                        <option value="limpieza">Limpieza Dental</option>
+                        <option value="emergencia">Emergencia Dental</option>
+                        <option value="consulta">Consulta General</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="doctor">Doctor Preferido (Opcional)</label>
+                    <select id="doctor" name="doctor">
+                        <option value="">Cualquier doctor disponible</option>
+                        <option value="ana-lopez">Dra. Ana López</option>
+                        <option value="carlos-perez">Dr. Carlos Pérez</option>
+                        <option value="maria-gonzalez">Dra. María González</option>
+                        <option value="javier-ramirez">Dr. Javier Ramírez</option>
+                        <option value="laura-martinez">Dra. Laura Martínez</option>
+                        <option value="roberto-diaz">Dr. Roberto Díaz</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha-cita">Fecha Preferida *</label>
+                    <input type="date" id="fecha-cita" name="fecha-cita" required>
+                </div>
+                <div class="form-group">
+                    <label for="hora-cita">Hora Preferida *</label>
+                    <select id="hora-cita" name="hora-cita" required>
+                        <option value="">Seleccione una hora</option>
+                        <option value="08:00">8:00 AM</option>
+                        <option value="09:00">9:00 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="13:00">1:00 PM</option>
+                        <option value="14:00">2:00 PM</option>
+                        <option value="15:00">3:00 PM</option>
+                        <option value="16:00">4:00 PM</option>
+                        <option value="17:00">5:00 PM</option>
+                        <option value="18:00">6:00 PM</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="motivo-consulta">Motivo de la Consulta *</label>
+                <textarea id="motivo-consulta" name="motivo-consulta"
+                    placeholder="Describa brevemente el motivo de su visita..." required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="comentarios-adicionales">Comentarios Adicionales</label>
+                <textarea id="comentarios-adicionales" name="comentarios-adicionales"
+                    placeholder="Alguna información adicional que desee compartir..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="emergencia" id="emergencia">
+                    <span>Marque esta casilla si es una emergencia dental</span>
+                </label>
+            </div>
+
+            <div class="form-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="terminos" id="terminos" required>
+                    <span>Acepto los términos y condiciones y la política de privacidad *</span>
+                </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary"
+                style="width: 100%; padding: 18px; font-size: 1.1rem; margin-top: 10px;">
+                <i class="fas fa-calendar-check"></i> Confirmar Cita
+            </button>
+        </form>
+
+        <div style="text-align: center;" class="slide-in-right">
+            <a href="index.html" class="btn-volver">
+                <i class="fas fa-arrow-left"></i> Volver al Sitio Principal
+            </a>
+        </div>
+    </section>
+
+    <!--Footer-->
+    <footer>
+        <div class="container">
+            <p class="copyright">© Copyright 2025. Plantilla <a href="https://aureaweb.pages.dev/Index"
+                    target="_blank">Áurea Web</a>. Todos los derechos reservados</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Script específico para la página de agendamiento
+        document.addEventListener('DOMContentLoaded', function () {
+            const formAgendamiento = document.querySelector('.form-agendamiento');
+
+            // Establecer fecha mínima como hoy
+            const fechaInput = document.getElementById('fecha-cita');
+            const today = new Date().toISOString().split('T')[0];
+            fechaInput.min = today;
+
+            if (formAgendamiento) {
+                formAgendamiento.addEventListener('submit', function (e) {
+                    e.preventDefault();
+
+                    // Validación adicional
+                    const terminos = document.getElementById('terminos');
+                    if (!terminos.checked) {
+                        alert('Debe aceptar los términos y condiciones para agendar su cita.');
+                        return;
+                    }
+
+                    // Simular envío exitoso
+                    alert('¡Cita agendada exitosamente! Recibirá un correo de confirmación en breve.');
+                    this.reset();
+
+                    // Resetear fecha mínima
+                    fechaInput.min = today;
+                });
+            }
+
+            // Observar elementos para animaciones
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(elemento => {
+                observer.observe(elemento);
+            });
+        });
+    </script>
+</body>
+
+</html>
